@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1 class="text-center mt-4 "> Register Form</h1>
+
+<h4>
+   
+    <form method="post"  class="form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-Primary" type="submit">Register</button>
+    </form>
+
+    <p>Have an Account ? <a href="{% url "login" %}">Login Here</a></p>
+    
+</h4>
+{% endblock %}
